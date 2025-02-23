@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int countOccurrences(int arr[], int n, int target) {
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == target)
+            count++; // Increment count when target is found
+    }
+    return count; // Return total occurrences of the target
+}
+
+int main() {
+    int arr[] = {2, 3, 2, 4, 2};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int target = 2;
+    
+    int result = countOccurrences(arr, n, target);
+    cout << "Element " << target << " occurs " << result << " times." << endl;
+    
+    return 0;
+}
