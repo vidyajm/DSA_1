@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int stopSearchWhenFound(int arr[], int n, int target) {
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == target) {
+            cout << "Target found at index: " << i << endl;
+            return i; // Stop search once target is found
+        }
+    }
+    cout << "Target not found" << endl;
+    return -1; // Target not found
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int target = 3;
+    
+    stopSearchWhenFound(arr, n, target);
+    
+    return 0;
+}
