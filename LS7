@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int findLargestIndex(int arr[], int n) {
+    int maxIndex = 0; // Assume the first element is the largest initially
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > arr[maxIndex])
+            maxIndex = i; // Update the index of the largest element
+    }
+    return maxIndex;
+}
+
+int main() {
+    int arr[] = {1, 5, 3, 9, 7};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    
+    int result = findLargestIndex(arr, n);
+    cout << "Largest element is at index: " << result << endl;
+    
+    return 0;
+}
